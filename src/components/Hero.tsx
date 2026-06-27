@@ -187,7 +187,7 @@ export default function Hero() {
             className="absolute top-2/3 left-4 px-3 py-1.5 rounded-xl bg-[#111115]/90 border border-neutral-800 text-xs font-mono text-accent flex items-center gap-1.5 shadow-xl shadow-black/40"
           >
             <span className="w-2 h-2 rounded-full bg-accent" />
-            Docker & CV
+            Next.js
           </motion.div>
           
         </div>
