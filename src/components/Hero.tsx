@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Mail, Terminal, FileDown } from "lucide-react";
 import { PROFILE } from "@/constants";
 import Image from "next/image";
+import Typewriter from "./Typewriter";
 
 export default function Hero() {
   return (
@@ -54,14 +55,14 @@ export default function Hero() {
           </h1>
 
           {/* Sub-headline / Role */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-sm md:text-base font-mono text-primary tracking-wide mb-6 border-b border-primary/20 pb-2 px-4 bg-primary/5 rounded inline-block"
-          >
-            {PROFILE.role}
-          </motion.div>
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="text-sm md:text-base font-mono tracking-wide mb-6 border-b border-primary/20 pb-2 px-4 bg-primary/5 rounded inline-block"
+            >
+            <Typewriter />
+            </motion.div>
 
           {/* Professional Summary */}
           <motion.p
