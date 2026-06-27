@@ -35,7 +35,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Premium Typography & Main Heading */}
-          <h1 className="text-4xl md:text-7xl font-black tracking-tight leading-[1.1] mb-6 text-white">
+          <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-[1.1] mb-6 text-white">
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
