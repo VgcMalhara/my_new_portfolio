@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react"; // 1. useState import කරා
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, ExternalLink, FolderGit2 } from "lucide-react";
 import Image from "next/image";
@@ -17,7 +17,7 @@ const PROJECTS = [
     ],
 
     description: "A comprehensive vehicle trading platform in Sri Lanka built using modern web stacks, featuring advanced filtering, dynamic search, and optimized media hosting.",
-    details: "Riyahala.lk යනු වාහන මිලදී ගැනීමට සහ විකිණීමට ඇති ශ්‍රී ලංකාවේ ප්‍රමුඛතම වෙබ් අඩවියකි.",
+    details: "Riyahala.lk is a leading vehicle trading platform in Sri Lanka designed for buying and selling automobiles efficiently.",
     tags: ["React.js", "Node.js", "MongoDB Atlas", "Vercel"],
     github: "https://github.com/VgcMalhara",
     live: "https://riyahala.lk",
@@ -29,17 +29,17 @@ const PROJECTS = [
     title: "JustPark.lk",
 
     gallery: [
-      "/projects/riyahala-1.jpg", 
-      "/projects/riyahala-2.jpg", 
+      "/projects/justpark/image.png", 
+      "/projects/justpark/gallery1.png", 
       "/projects/riyahala-3.jpg"
     ],
 
     description: "Smart parking management solution tailored for urban spaces, integrating real-time availability tracking and secure backend architecture.",
-    details: "නාගරික වාහන නැවැත්වීමේ ගැටලුවට විසඳුමක් ලෙස JustPark.lk නිර්මාණය කර ඇත.",
+    details: "JustPark.lk is a smart parking management solution built to address urban vehicle parking challenges seamlessly.",
     tags: ["React.js", "Node.js", "MySQL"],
     github: "https://github.com/VgcMalhara",
     live: "#",
-    image: "/projects/justpark.jpg",
+    image: "/projects/justpark/image.png",
     color: "from-emerald-600/10 to-teal-950/30",
     borderColor: "group-hover:border-emerald-500/30"
   },
@@ -53,7 +53,7 @@ const PROJECTS = [
     ],
 
     description: "An innovative digital marketplace empowering local agricultural vendors and streamlining supply chain operations.",
-    details: "ප්‍රාදේශීය ගොවීන් සහ පාරිභෝගිකයන් අතර සම්බන්ධය ඇති කරන මෙම වෙබ් අඩවිය හරහා කෘෂිකාර්මික නිෂ්පාදන අලෙවි කරගත හැක.",
+    details: "HelaHarvest.lk is an innovative digital agricultural marketplace connecting local farmers directly with consumers.",
     tags: ["React.js", "Node.js", "MongoDB"],
     github: "https://github.com/VgcMalhara",
     live: "#",
@@ -62,27 +62,27 @@ const PROJECTS = [
     borderColor: "group-hover:border-orange-500/30"
   },
   {
-    title: "WhatsApp AI Bot & Order System",
+    title: "WoolBear.lk",
 
     gallery: [
-      "/projects/riyahala-1.jpg", 
-      "/projects/riyahala-2.jpg", 
-      "/projects/riyahala-3.jpg"
+      "/projects/woolbear-1.jpg", 
+      "/projects/woolbear-2.jpg", 
+      "/projects/woolbear-3.jpg"
     ],
     
-    description: "Automated conversation thread handling and seamless database logic integration leveraging Next.js and Meta Business API webhook infrastructures.",
-    details: "Meta Business API භාවිතයෙන් නිර්මාණය කළ AI Bot පද්ධතියකි.",
-    tags: ["Next.js", "Meta API", "PostgreSQL"],
+    description: "An e-commerce online store specialized in handmade wool toys, providing a seamless shopping experience and secure cart management.",
+    details: "WoolBear.lk is an online store dedicated to selling handcrafted wool toys with secure user checkout and real-time inventory tracking.",
+    tags: ["Next.js", "Firebase", "PostgreSQL"],
     github: "https://github.com/VgcMalhara",
     live: "#",
-    image: "/projects/chatbot.jpg",
-    color: "from-purple-600/10 to-fuchsia-950/30",
-    borderColor: "group-hover:border-purple-500/30"
+    image: "/projects/woolbear/image.png",
+    color: "from-pink-600/10 to-rose-950/30",
+    borderColor: "group-hover:border-pink-500/30"
   },
 ];
 
 export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState<any>(null); // 2. State එක
+  const [selectedProject, setSelectedProject] = useState<any>(null);
 
   return (
     <section id="projects" className="relative py-32 px-4 bg-[#060608]">
@@ -93,7 +93,7 @@ export default function Projects() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface/40 backdrop-blur-md border border-neutral-800/60 text-xs font-mono text-accent mb-4"
+            className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface/45 backdrop-blur-md border border-neutral-800/60 text-xs font-mono text-accent mb-4"
           >
             <FolderGit2 className="w-3.5 h-3.5 text-accent" />
             <span>SELECTED WORK</span>
@@ -158,7 +158,6 @@ export default function Projects() {
                     <a href={project.github} target="_blank" rel="noreferrer" className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-950 text-xs font-mono border border-neutral-800 text-muted hover:text-white hover:border-neutral-700 transition-all">Code</a>
                     <a href={project.live} target="_blank" rel="noreferrer" className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-950 text-xs font-mono border border-neutral-800 text-muted hover:text-white hover:border-neutral-700 transition-all">Live Demo</a>
                     
-                    {/* 3. Button එකට onClick එක දැම්මා */}
                     <button 
                         onClick={() => setSelectedProject(project)}
                         className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-950 text-xs font-mono border border-neutral-800 text-muted hover:text-white hover:border-neutral-700 transition-all"
@@ -181,7 +180,6 @@ export default function Projects() {
         </div>
       </div>
 
-      {/* 4. Modal එක */}
       <ProjectModal 
         project={selectedProject} 
         onClose={() => setSelectedProject(null)} 

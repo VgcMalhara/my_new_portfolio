@@ -27,7 +27,7 @@ const TABS_DATA = [
   },
   {
     id: "ml",
-    title: "Machine Learning / Data",
+    title: "AI & Computer Vision",
     icon: <Brain className="w-4 h-4" />,
   },
 ];
@@ -56,17 +56,18 @@ const SKILLS_DATA = [
   { name: "Supabase", category: "devops", level: "Advanced", color: "from-emerald-600 to-teal-400" },
   { name: "Vercel / Render", category: "devops", level: "Expert", color: "from-neutral-300 to-neutral-500" },
   
-  // Machine Learning
+  // AI & Computer Vision
   { name: "Python", category: "ml", level: "Advanced", color: "from-blue-500 to-yellow-400" },
-  { name: "Machine Learning", category: "ml", level: "Intermediate", color: "from-purple-500 to-indigo-500" },
-  { name: "Data Science", category: "ml", level: "Intermediate", color: "from-fuchsia-500 to-pink-500" },
-  { name: "Data Modeling", category: "ml", level: "Advanced", color: "from-violet-500 to-purple-400" },
+  { name: "OpenCV", category: "ml", level: "Advanced", color: "from-blue-600 to-teal-400" },
+  { name: "YOLO (Object Detection)", category: "ml", level: "Advanced", color: "from-amber-500 to-red-500" },
+  { name: "Roboflow", category: "ml", level: "Advanced", color: "from-purple-500 to-fuchsia-500" },
+  { name: "PyTorch", category: "ml", level: "Intermediate", color: "from-orange-600 to-rose-500" },
+  { name: "Computer Vision", category: "ml", level: "Advanced", color: "from-indigo-500 to-cyan-500" },
 ];
 
 export default function Skills() {
   const [activeTab, setActiveTab] = useState("all");
 
-  // තෝරලා තියෙන Tab එකට අනුව Skills Filter කිරීම
   const filteredSkills = activeTab === "all" 
     ? SKILLS_DATA 
     : SKILLS_DATA.filter(skill => skill.category === activeTab);
