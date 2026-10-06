@@ -77,7 +77,7 @@ export default function Skills() {
             className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-neutral-900/80 border border-neutral-800/60 text-[10px] sm:text-[11px] font-mono text-accent mb-3 sm:mb-4 tracking-wider"
           >
             <Sparkles className="w-3 h-3 text-accent animate-pulse" />
-            <span>INDUSTRIAL COMMAND CENTER</span>
+            <span>PREVIEW INFRASTRUCTURE</span>
           </motion.div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white mb-3 sm:mb-4">
             My Tech Ecosystem
