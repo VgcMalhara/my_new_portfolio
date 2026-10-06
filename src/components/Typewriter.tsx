@@ -33,28 +33,27 @@ export default function Typewriter() {
   }, [text, isDeleting, index]);
 
   return (
-    // Mobile වලදී පෑඩින් අඩු කරලා, desktop එකේදී පෑඩින් වැඩි කරන විදියට හැදුවා
-    <div className="relative group bg-[#0a0a0c] border border-neutral-800 rounded-xl px-3 py-2.5 md:px-5 md:py-3 font-mono flex items-center gap-2 md:gap-3 shadow-2xl shadow-black/50 w-full max-w-sm md:max-w-md">
+    <div className="relative group bg-[#0a0a0c] border border-neutral-800/90 rounded-xl px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-3 font-mono flex items-center gap-2 md:gap-3 shadow-2xl shadow-black/50 w-full max-w-full sm:max-w-md">
       
-      {/* Decorative dots - Mobile වලදී කුඩා කරා */}
+      {/* Decorative dots */}
       <div className="flex gap-1 shrink-0">
         <div className="w-2 h-2 rounded-full bg-red-500/80" />
         <div className="w-2 h-2 rounded-full bg-yellow-500/80" />
         <div className="w-2 h-2 rounded-full bg-green-500/80" />
       </div>
       
-      {/* Prompt - මෙතනදී text-xs පාවිච්චි කළා mobile වලදී හොඳට පේන්න */}
-      <div className="flex items-center gap-1.5 overflow-hidden text-[11px] md:text-sm">
-        <span className="text-emerald-500 font-bold hidden md:block">➜</span>
-        <span className="text-blue-400">~</span>
-        <span className="text-neutral-500 truncate max-w-[60px] md:max-w-none">profile.sh</span>
+      {/* Prompt & animated typing text */}
+      <div className="flex items-center gap-1.5 overflow-hidden text-[11px] sm:text-xs md:text-sm min-w-0">
+        <span className="text-emerald-500 font-bold hidden sm:inline">➜</span>
+        <span className="text-blue-400 shrink-0">~</span>
+        <span className="text-neutral-500 shrink-0 text-[10px] sm:text-xs">profile.sh</span>
         
-        <span className="text-white font-medium whitespace-nowrap">
+        <span className="text-white font-medium truncate">
           {text}
           <motion.span 
             animate={{ opacity: [0, 1, 0] }} 
             transition={{ repeat: Infinity, duration: 0.8 }}
-            className="inline-block w-[6px] h-[14px] md:h-[16px] bg-white/60 ml-1 align-middle"
+            className="inline-block w-[6px] h-[12px] sm:h-[14px] md:h-[16px] bg-white/60 ml-1 align-middle"
           />
         </span>
       </div>

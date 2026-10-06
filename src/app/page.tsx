@@ -8,14 +8,14 @@ import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <main className="bg-[#060608] min-h-screen text-white font-sans selection:bg-indigo-500/30 selection:text-white antialiased">
+    <main className="bg-[#060608] min-h-screen text-white font-sans selection:bg-indigo-500/30 selection:text-white antialiased overflow-x-hidden">
       <Navbar />
-      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
+      <div className="mx-auto w-full max-w-6xl px-3 sm:px-6">
         <Hero />
         <Skills />
         <Experience />
         <Education />
-        <Projects /> {/* මෙතන තියෙන ස්ටිකී කාඩ්ස් වලට දැන් හොඳට ඉඩ ලැබෙනවා */}
+        <Projects />
         <Contact />
       </div>
     </main>
